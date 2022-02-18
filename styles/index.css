@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0 auto;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1rem;
+    color: #404040;
+    text-align: center;
+}
+
+/*  ===================
+    TYPEOGRAPHY
+    =================== */
+h1 {
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: #fff;
+}
+h1 + p {
+    color: #f18119;
+    font-weight: 900;
+    font-size: 1.3125rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+h2 {
+    font-size: 1.3125rem;
+    margin: 0;
+}
+h2 + p {
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #f18119;
+    margin-top: 0;
+}
+.top-text {
+    font-size: 0.625rem;
+    color: #f18119;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.021rem;
+}
+
+.small {
+    font-size: 0.625rem;
+    letter-spacing: 0.021rem;
+}
+strong {
+    font-weight: 900;
+}
+
+@media (min-width: 550px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    body {
+        font-size: 1.125rem;
+    }
+}
+
+/*  =====================
+    LAYOUT
+    ===================== */
+/* INTRO */
+.intro {
+    background-image: url(../images/ribs.jpg);
+    background-color: #818181;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+
+    padding: 0 0.5em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 50vh;
+}
+.top-text {
+    order: -1;
+    margin-top: 0;
+    padding-top: 0.4em;
+    border-top: 10px solid;
+    border-image: linear-gradient(to left, #ff713b, #ffa51d) 1;
+    width: fit-content;
+}
+
+/* MAIN */
+.main-content {
+    padding: 2em 1em;
+}
+
+/* FORM */
+.form {
+    color: #5a5a5a;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 0;
+}
+form * {
+    font-family: inherit;
+    width: 75%;
+    height: 37px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+form input {
+    border: 1px solid #818181;
+    margin-bottom: 0.875rem;
+    letter-spacing: 1.1px;
+    transition: transform 300ms;
+}
+form input:focus {
+    transform: scale(1.13);
+}
+
+form button {
+    background: transparent linear-gradient(270deg, #ff713b, #ffa51d);
+    border: none;
+    color: white;
+    font-weight: 900;
+    font-size: 0.625rem;
+    letter-spacing: 1.5px;
+    transition: transform 300ms;
+}
+
+form button:hover,
+form button:focus {
+    transform: scale(1.13);
+}
+
+@media (min-width: 550px) {
+    body {
+        display: flex;
+        max-width: 1000px;
+    }
+
+    .intro,
+    .main-content {
+        width: 100%;
+        padding: 0 2em;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .intro {
+        background-image: url(../images/ribs.jpg),
+            linear-gradient(235deg, #e95920cd, #ffa51daa);
+        background-repeat: no-repeat;
+        background-position: left;
+
+        justify-content: space-between;
+        padding-bottom: 5em;
+    }
+
+    h1 + p {
+        margin-bottom: 4em;
+    }
+}
